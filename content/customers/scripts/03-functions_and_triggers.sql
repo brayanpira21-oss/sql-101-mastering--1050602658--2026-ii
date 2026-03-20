@@ -1,5 +1,5 @@
 -- FUNCTION: UPDATE TOTAL
-CREATE OR REPLACE FUNCTION cs.update_total_orders()
+CREATE OR REPLACE FUNCTION pay.update_total_orders()
 RETURNS TEXT
 LANGUAGE plpgsql
 AS
@@ -27,7 +27,7 @@ END;
 $$;
 
 -- FUNCTION: USD_TO_COP
-CREATE OR REPLACE FUNCTION cs.convert_usd_to_cop()
+CREATE OR REPLACE FUNCTION ctg.convert_usd_to_cop()
 RETURNS TEXT
 LANGUAGE plpgsql
 AS
@@ -45,7 +45,7 @@ END;
 $$;
 
 -- FUNCTION: UPDATE THE CATEGORIES IN PRODUCTS
-CREATE OR REPLACE FUNCTION cs.update_category_id(product_id INT,
+CREATE OR REPLACE FUNCTION ctg.update_category_id(product_id INT,
                                              cat_id INT)
 RETURNS TEXT
 LANGUAGE plpgsql
@@ -66,7 +66,7 @@ $$;
 
 -- CREATE TRIGGER THAT AFTER INSERT
 -- UPDATE AUTO THE COP PRICE
-CREATE OR REPLACE FUNCTION cs.update_price_cop_af_ins()
+CREATE OR REPLACE FUNCTION ctg.update_price_cop_af_ins()
 RETURNS TRIGGER
 LANGUAGE plpgsql
 AS 
