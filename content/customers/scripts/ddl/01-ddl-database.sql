@@ -1,6 +1,6 @@
 -- CREATE DATABASE customers;
 
-CREATE USER admin WITH PASSWORD 'test25**';
+CREATE USER admin WITH PASSWORD 'coffe2026';
 
 CREATE DATABASE customers_db WITH
     OWNER admin
